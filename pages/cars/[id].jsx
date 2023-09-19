@@ -1,5 +1,6 @@
 // Node modules
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 // SSR
 export async function getServerSideProps({ params }) {
@@ -35,7 +36,7 @@ export default function CarPage({ car }) {
   return (
     <div>
       <h1>Car id #{id}</h1>
-      <img src={car.image} />
+      <Image src={car.image} fill width={800} height={600} />
     </div>
   );
 }
